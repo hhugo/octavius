@@ -16,6 +16,5 @@ depends: [
   "topkg" {build & >= "0.7.5"} ]
 
 build: [
-  ["jbuilder" "subst"] {pinned}
   ["jbuilder" "build" "-p" name "-j" jobs]
 ]
