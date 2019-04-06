@@ -22,7 +22,7 @@ let process file lexbuf =
       } in
       { Location. loc_start; loc_end; loc_ghost=false }
     in
-    Location.(report_error Format.err_formatter (error ~loc msg));
+    Location.print_report Format.err_formatter (Location.error ~loc msg);
     Format.fprintf Format.err_formatter "\n%!"
 
 let () =
